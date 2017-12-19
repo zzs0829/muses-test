@@ -11,10 +11,10 @@ HS_USE_NAMESPACE
 
 int main(int argc, char *argv[])
 {
+    QGuiApplication app(argc, argv);
     QTime time;
     time.start();
     qDebug() << "Read to app :" << time.elapsed();
-    QGuiApplication app(argc, argv);
     qDebug() << "Start to app :" << time.elapsed();
 
 
@@ -37,9 +37,10 @@ int main(int argc, char *argv[])
                 MultimediaService *service = plugin->create(MEDIASERVICE_MEDIAPLAYER);
                 if(service) {
                     MediaPlayerController * control = service->requestController<MediaPlayerController *>();
-                    QNetworkRequest request(QUrl("file:///home/dev/Music/333.mp4"));
+                    QNetworkRequest request(QUrl("file:///home/dev/Music/111.avi"));
                     MediaContent media(request);
                     control->setMedia(media);
+                    control->play();
                 }
             }else{
                 qDebug() << "Get instance failure.";
