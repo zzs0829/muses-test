@@ -41,6 +41,7 @@
 import QtQuick 2.6
 import QtQuick.Window 2.2
 import QtWayland.Compositor 1.0
+import MusesTest 1.0
 
 WaylandCompositor {
     id: wlcompositor
@@ -51,8 +52,26 @@ WaylandCompositor {
         window: Window {
             width: 1280
             height: 720
-            color: "#00000000"
+            color: "#FFFFFF"
             visible: true
+
+            ID3Tag {
+                id: id3tag
+                path: "/home/root/777.mp3"
+            }
+
+            Column {
+                anchors.centerIn: parent
+                spacing: 10
+                Text { text: id3tag.title }
+                Text { text: id3tag.artist }
+                Text { text: id3tag.album }
+                Text { text: id3tag.path }
+                Image {
+                    source: id3tag.albumUrl
+                }
+            }
+
         }
     }
     // The chrome defines the window look and behavior.
