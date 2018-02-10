@@ -55,6 +55,12 @@ WaylandCompositor {
             visible: true
 
 
+            Text{
+                anchors.centerIn: parent
+                font.pointSize: 48
+                text: "Hello World"
+            }
+
         }
     }
     // The chrome defines the window look and behavior.

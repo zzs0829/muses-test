@@ -8,10 +8,10 @@ SOURCES += main.cpp \
 
 RESOURCES += qml.qrc
 
-INCLUDEPATH += /home/dev/Downloads/MediaInfo_DLL_GNU_FromSource/MediaInfoLib/Source
-INCLUDEPATH += /home/dev/Downloads/MediaInfo_DLL_GNU_FromSource/ZenLib/Source
-LIBS += -L/home/dev/Projects/_build/MediaInfoLib-IMX6_Qt_5_8-Release -lmediainfo
-LIBS += -L/home/dev/Projects/_build/ZenLib-IMX6_Qt_5_8-Release -lzen
+#INCLUDEPATH += /home/dev/Downloads/MediaInfo_DLL_GNU_FromSource/MediaInfoLib/Source
+#INCLUDEPATH += /home/dev/Downloads/MediaInfo_DLL_GNU_FromSource/ZenLib/Source
+#LIBS += -L/home/dev/Projects/_build/MediaInfoLib-IMX6_Qt_5_8-Release -lmediainfo
+#LIBS += -L/home/dev/Projects/_build/ZenLib-IMX6_Qt_5_8-Release -lzen
 
 LIBS += -ltag -lz
 INCLUDEPATH += /usr/include/taglib
